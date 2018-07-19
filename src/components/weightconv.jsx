@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
+import WeightSearch from '../containers/weight_search';
+import WeightList from '../containers/weight_list';
 
-export default class App extends Component {
+export default class WeightConv extends Component {
   render() {
     return (
       <div>
         <div className="topnav">
           <a href="/temp">Temperature Conversion</a>
-          <a href="/weight">Weight Conversion</a>
+          <a className="active" href="/weight">Weight Conversion</a>
           <a href="/measure">Inches/Centimeter Conversion</a>
           <a href="/feetmeters">Feet/Meters Conversion</a>
         </div>
-        <h3>Select Conversion Category to get started!</h3>
+        <WeightSearch />
+        <WeightList />
       </div>
     );
   }

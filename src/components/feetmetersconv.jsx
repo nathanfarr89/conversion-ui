@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import FeetMetersSearch from '../containers/feetmeters_search';
+import FmList from '../containers/fm_list';
 
-export default class App extends Component {
+export default class FeetMetersConv extends Component {
   render() {
     return (
       <div>
@@ -8,9 +10,10 @@ export default class App extends Component {
           <a href="/temp">Temperature Conversion</a>
           <a href="/weight">Weight Conversion</a>
           <a href="/measure">Inches/Centimeter Conversion</a>
-          <a href="/feetmeters">Feet/Meters Conversion</a>
+          <a className="active" href="/feetmeters">Feet/Meters Conversion</a>
         </div>
-        <h3>Select Conversion Category to get started!</h3>
+        <FeetMetersSearch />
+        <FmList />
       </div>
     );
   }
